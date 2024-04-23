@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm" class="details">
+            <div class="Title-left quicksand">
+                <h1>House Details</h1>
+                <hr>
+            </div>
+            <select name="location" class="contain-input" required>
+                <option value="" selected disabled hidden>Choose a location</option>
+                {% for loc in location %}
+                <option value="{{ loc }}">{{ loc }}</option>
+                {% endfor %}
+            </select>
+            <div class="input-container">
+                <select name="bhk" class="contain-input" required onchange="checkCustom(this)">
+                    <option value="" selected disabled hidden>Choose BHK</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <input type="text" id="customBHK" name="bhk" placeholder="Enter BHK" class="contain-input"
+                    style="display: none;">
+            </div>
+            <div class="input-container">
+                <select name="bath" class="contain-input" required onchange="checkCustom(this)">
+                    <option value="" selected disabled hidden>Choose Bathroom</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <input type="text" id="customBath" name="bath" placeholder="Enter Bathroom" class="contain-input"
+                    style="display: none;">
+            </div>
+            <input type="text" name="sqft" placeholder="Enter Sqft" class="contain-input" required>
+            <button type="submit">Submit<img src="../static/assets/arrow_icon.png" alt=""> </button>
+        </form>
+        <div class="image-right">
+            <img src="../static/assets/Designer-24.png" alt="">
+            <div class="result">
+                <h2>Your predicted price is :- </h2>
+                <h3 id="predictedPrice">₹   </h3>
+            </div>
+        </div>
+    </div>
+    <script src="../static/JS/script.js"></script>
+</body>
+
+</html>

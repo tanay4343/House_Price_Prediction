@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    font-family: 'Outfit';
+    background-color: #edf6f9;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.Title-left h1 {
+    font-weight: 600;
+    color: #006d77;
+    font-size: 40px;
+}
+
+.Title-left hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #006d77;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contain-input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+    font-size: 15px;
+    background-color: #83c5be;
+}
+
+
+.container button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #83c5be;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #006d77;
+}
+
+.container button img {
+    transition: all ease-in-out 0.2s;
+    height: 15px;
+}
+
+.container button:hover img {
+    position: relative;
+    left: 5px;
+}
+
+.image-right img {
+    width: 500px;
+}
+
+@media (max-width:800px) {
+    .contain-inputs {
+        width: 80vw;
+    }
+
+    .image-right {
+        display: none;
+    }
+}
+
+.custom-select {
+    position: relative;
+    width: 400px;
+    overflow: auto; /* Enable scrolling */
+    max-height: 150px; /* Set max-height to enable scrollbar */
+}
+
+
+.custom-select::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.custom-select::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.custom-select::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.custom-select option.custom {
+    color: #666;
+    font-weight: 500;
+}
+
+.custom-select option.custom:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.image-right .result
+{
+    border:solid 2px;
+    border-radius: 20px;
+    justify-content: centre;
+    font-weight: 600;
+    color: #006d77;
+    font-size: 20px;
+    padding:20px;
